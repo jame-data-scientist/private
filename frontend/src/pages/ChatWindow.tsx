@@ -10,7 +10,7 @@ const COMMON_EMOJIS = ['😀', '😂', '😅', '🤣', '😊', '😍', '🤔', '
 const ChatWindow: React.FC = () => {
   const { groupId: routeGroupId } = useParams<{ groupId: string }>();
   const navigate = useNavigate();
-  const { username, groupId, setGroupId, messages, members, systemMessages, sendMessage, leaveGroup } = useChat();
+  const { username, setGroupId, messages, members, sendMessage, leaveGroup } = useChat();
 
   const [inputMessage, setInputMessage] = useState('');
   const [showSettings, setShowSettings] = useState(false);
