@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CipherChat | Group Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Inter:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#2a2a2c",
+                        "on-primary-container": "#006c71",
+                        "outline": "#849495",
+                        "surface-variant": "#353437",
+                        "tertiary-fixed-dim": "#e7c427",
+                        "secondary-fixed-dim": "#dab9ff",
+                        "tertiary-container": "#ffdb3f",
+                        "inverse-on-surface": "#313032",
+                        "on-surface-variant": "#b9caca",
+                        "on-secondary-fixed": "#2a0053",
+                        "on-tertiary": "#3a3000",
+                        "on-primary-fixed-variant": "#004f53",
+                        "inverse-surface": "#e5e1e4",
+                        "secondary-fixed": "#eedbff",
+                        "on-error": "#690005",
+                        "surface-bright": "#39393b",
+                        "surface": "#131315",
+                        "on-primary-fixed": "#002021",
+                        "background": "#131315",
+                        "tertiary": "#fff9f0",
+                        "tertiary-fixed": "#ffe16c",
+                        "outline-variant": "#3a494a",
+                        "surface-dim": "#131315",
+                        "on-tertiary-fixed-variant": "#544600",
+                        "on-surface": "#e5e1e4",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed-variant": "#611baa",
+                        "secondary": "#dab9ff",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed": "#63f7ff",
+                        "on-secondary-container": "#cfa7ff",
+                        "surface-container-highest": "#353437",
+                        "primary-container": "#00f5ff",
+                        "surface-container-lowest": "#0e0e10",
+                        "error-container": "#93000a",
+                        "on-secondary": "#460084",
+                        "on-tertiary-fixed": "#221b00",
+                        "secondary-container": "#641fac",
+                        "on-primary": "#003739",
+                        "surface-container": "#201f21",
+                        "on-background": "#e5e1e4",
+                        "inverse-primary": "#00696e",
+                        "on-tertiary-container": "#736000",
+                        "primary-fixed-dim": "#00dce5",
+                        "primary": "#e9feff",
+                        "surface-container-low": "#1b1b1d",
+                        "surface-tint": "#00dce5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-glow {
+            box-shadow: 0 0 20px rgba(99, 247, 255, 0.1);
+        }
+        .neon-border-left {
+            box-shadow: -2px 0 15px -5px rgba(0, 245, 255, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body selection:bg-primary-container selection:text-on-primary-fixed overflow-hidden">
+<!-- Global Layout Shell -->
+<div class="flex h-screen w-full">
+<!-- SideNavBar (from JSON) -->
+<aside class="fixed left-0 top-0 h-full flex flex-col w-[260px] border-r border-[#00f5ff]/20 bg-[#0e0e10] custom-glow z-50">
+<div class="p-6">
+<div class="text-2xl font-bold tracking-tighter text-[#00f5ff] font-['Space_Grotesk'] mb-8">CipherChat</div>
+<div class="flex items-center gap-3 mb-10 p-2 bg-[#201f21] rounded-lg">
+<img class="w-10 h-10 rounded-full border border-[#00f5ff]/30 object-cover" data-alt="User profile avatar with a glowing neon blue ring indicating active status in a dark environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwEISpDoTCjuexdT3x_OBh52qr5-jFzlUAw9ER7q7q9t7bJ5Wpi9EXkdouA4PIi8g4dzUyPTBZEnMo6RXb1ntbEw4EF0iXBC3S8VkryjsCFOqQnEUTNlT1Q9Y_bMp1MNPYAIEta4jEVz_UUKSEd2TFmBMI0GNXaBQmUNMhO7BjnGXFpvq5dgnm1309uz482rvHUxubmfkDtVXrfv7HNarpxAXM-Y95XXfppqj7aNppcLkBxolbTlGy0bqtG5IuhB86AMYEeNRah-8"/>
+<div>
+<div class="text-sm font-bold text-primary tracking-tight font-headline">Verified Agent</div>
+<div class="text-[10px] text-on-surface-variant uppercase tracking-widest font-label">Status: Active</div>
+</div>
+</div>
+<nav class="space-y-2">
+<button class="w-full flex items-center gap-3 px-4 py-3 rounded text-[#b9caca] opacity-70 hover:bg-[#353437] transition-all duration-300 group">
+<span class="material-symbols-outlined text-xl">shield</span>
+<span class="font-label tracking-wider text-sm uppercase">Home</span>
+</button>
+<button class="w-full flex items-center gap-3 px-4 py-3 rounded bg-[#641fac]/20 border-l-2 border-[#00f5ff] text-[#00f5ff] font-bold group">
+<span class="material-symbols-outlined text-xl">chat</span>
+<span class="font-label tracking-wider text-sm uppercase">Messages</span>
+</button>
+<button class="w-full flex items-center gap-3 px-4 py-3 rounded text-[#b9caca] opacity-70 hover:bg-[#353437] transition-all duration-300 group">
+<span class="material-symbols-outlined text-xl">key</span>
+<span class="font-label tracking-wider text-sm uppercase">Encryption</span>
+</button>
+<button class="w-full flex items-center gap-3 px-4 py-3 rounded text-[#b9caca] opacity-70 hover:bg-[#353437] transition-all duration-300 group">
+<span class="material-symbols-outlined text-xl">settings</span>
+<span class="font-label tracking-wider text-sm uppercase">Settings</span>
+</button>
+</nav>
+</div>
+<div class="mt-auto p-6 space-y-4">
+<button class="w-full py-3 bg-gradient-to-r from-primary-container to-secondary-container text-on-primary-fixed font-headline font-bold text-xs uppercase tracking-widest rounded hover:brightness-110 active:scale-95 transition-all">
+                    Create Group
+                </button>
+<div class="pt-4 border-t border-outline-variant/20 space-y-2">
+<button class="w-full flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:text-primary transition-colors text-sm font-label uppercase">
+<span class="material-symbols-outlined text-lg">sensors</span> Status
+                    </button>
+<button class="w-full flex items-center gap-3 px-4 py-2 text-error/70 hover:text-error transition-colors text-sm font-label uppercase">
+<span class="material-symbols-outlined text-lg">logout</span> Logout
+                    </button>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 ml-[260px] mr-[300px] flex flex-col relative bg-surface">
+<!-- TopAppBar (from JSON) -->
+<header class="h-16 flex justify-between items-center px-6 bg-[#0e0e10]/80 backdrop-blur-xl border-b border-outline-variant/10">
+<div class="text-xl font-black text-[#00f5ff] uppercase tracking-widest font-headline">CipherChat</div>
+<div class="flex items-center gap-8">
+<div class="hidden lg:flex gap-6">
+<a class="text-[#00f5ff] border-b-2 border-[#00f5ff] pb-1 font-label text-[10px] tracking-widest uppercase" href="#">Direct Messages</a>
+<a class="text-[#b9caca] hover:text-[#00f5ff] transition-all font-label text-[10px] tracking-widest uppercase" href="#">Encrypted Channels</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-container transition-all">search</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-container transition-all">notifications</button>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary-container transition-all">security</button>
+<button class="px-4 py-1.5 bg-surface-container-highest border border-primary-container/20 text-primary-container text-[10px] font-bold uppercase tracking-widest rounded hover:bg-primary-container/10 transition-all">
+                            New Cipher
+                        </button>
+</div>
+</div>
+</header>
+<!-- Placeholder Chat Canvas -->
+<section class="flex-1 p-8 overflow-y-auto">
+<div class="max-w-3xl mx-auto space-y-8">
+<div class="flex flex-col items-center justify-center h-full opacity-20 py-20">
+<span class="material-symbols-outlined text-8xl mb-4" style="font-variation-settings: 'FILL' 1;">enhanced_encryption</span>
+<h2 class="font-headline text-2xl tracking-tighter uppercase">Secure Environment Active</h2>
+<p class="font-label text-sm tracking-widest mt-2">END-TO-END QUANTUM ENCRYPTION ENABLED</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Group Settings Panel (The Task Component) -->
+<aside class="fixed right-0 top-0 h-full w-[300px] bg-[#141418] border-l border-primary-container/20 flex flex-col z-50 neon-border-left">
+<!-- Group Header -->
+<div class="p-6 border-b border-outline-variant/10">
+<div class="flex items-center justify-between mb-4">
+<span class="font-label text-[10px] text-primary tracking-[0.2em] uppercase opacity-70">Group Profile</span>
+<span class="flex h-2 w-2 rounded-full bg-primary-container shadow-[0_0_8px_rgba(0,245,255,0.6)]"></span>
+</div>
+<div class="relative group">
+<div class="w-20 h-20 mx-auto mb-4 relative">
+<img class="w-full h-full object-cover rounded-xl border-2 border-outline-variant/30" data-alt="Abstract cyber-tech artwork with neon purple and cyan geometric patterns suitable for a secret group icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLKPHSz1V47nmrfQGofJ0PD0VFTH4TXGq7gq1Y6e7b1-re8tLKRd7tEyiblVml0GfKEx3Ax26esJD0nFq75JS8lv244q7v6WsaTFepUFHBpzBCC8SAxRw9xZw7iTDoMi-60PWdTR8SlhY46LBbmnSX8xi4WNJlE--0KXesy9q4TNgNvl3X800Z9rtCp9Mrw_7b2yhHbJbIbhGJ8w-4RexgSBT_jO_NGgfFFaPwKQdsoic0iua-Bshz3kK3Mu5R3RdoI3Of6h6FOew"/>
+<button class="absolute -bottom-1 -right-1 bg-surface-container-highest p-1.5 rounded-lg border border-primary-container/30 hover:bg-primary-container hover:text-on-primary-fixed transition-all shadow-lg">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+</div>
+<div class="flex items-center justify-center gap-2">
+<h1 class="font-headline text-xl font-bold text-primary tracking-tight">Project: NEON_VALT</h1>
+<button class="text-on-surface-variant hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+</div>
+<p class="text-center text-[11px] font-label text-on-surface-variant uppercase tracking-widest mt-1 opacity-50">Est. 2024.05.12</p>
+</div>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto custom-scrollbar">
+<!-- Group Code Section -->
+<div class="p-6">
+<label class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest mb-3 block">Access Protocol</label>
+<div class="bg-surface-container rounded p-3 flex items-center justify-between border border-outline-variant/20">
+<div class="font-mono text-xs tracking-tighter text-on-surface/60">
+                            •••• •••• •••• ••••
+                        </div>
+<div class="flex gap-2">
+<button class="px-2 py-1 text-[9px] font-bold text-primary-container border border-primary-container/30 rounded hover:bg-primary-container/10 transition-all uppercase tracking-tighter">Reveal</button>
+<button class="text-on-surface-variant hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Member List -->
+<div class="px-6 pb-6">
+<div class="flex items-center justify-between mb-4">
+<label class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest block">Active Agents (5)</label>
+<button class="text-[10px] font-bold text-secondary tracking-widest uppercase hover:underline">Add</button>
+</div>
+<div class="space-y-3">
+<!-- Member Item 1 -->
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-9 h-9 rounded-lg object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Profile photo of a man in a high-tech studio with moody blue backlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEmtBkiiijKNKUuf9vSHcdBBxW9ak_UBlccLYcg2p6NmVX6FKhLQnO8gS_-0TwcvEu9dH8j5285KQmlzSODBPq6R9ty7kF8SiALTMZQ8IRZfbol9yZqSRSQHUcMhceMGeVmSAvV0W3EVEVpHhD3YM7du43t-SrIp6duou1RSheP_ybiq6wf204UHfzcMhb2BrBUxS-o6U7LiUi2c0m9PgAG4A708-ESzvBEG7xWAadwt9FvmqOHHeSULpXePtoVRfcBX8YSP45orc"/>
+<span class="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full bg-emerald-500 border-2 border-[#141418]"></span>
+</div>
+<div>
+<div class="text-xs font-bold font-headline tracking-tight text-on-surface">Vector_Prime</div>
+<div class="text-[9px] font-label text-primary uppercase tracking-widest opacity-60">Admin</div>
+</div>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant/40 hover:text-on-surface text-sm">more_vert</button>
+</div>
+<!-- Member Item 2 -->
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-9 h-9 rounded-lg object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Portrait of a female developer with neon reflection on glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMhF0hi14WJR3I7Gf4ySSGSS8NYkDXyTCo_o69p1lmPi2ASVYtqX3NiP9_OeYn-kGeAq_ZmGluNBQLydOQOqN2FHe9tKFea3KyKF10nPKCchxG17qvWMVrVHt9UCPW_esPb2qt5T3GEEcoR-wZoL9F0lIO76pyvNp2FKXUfyJ1rU_c2e2h-46p93DkGqyenflRwWmYGqdU6LMd_gQyDWGy9OF2EFjAHkV-ysyhjlZ9phZJ2T-BRR5GQF0cB4F4L-bIDFalCZ_qvLM"/>
+<span class="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full bg-emerald-500 border-2 border-[#141418]"></span>
+</div>
+<div>
+<div class="text-xs font-bold font-headline tracking-tight text-on-surface">Ghost_Queen</div>
+<div class="text-[9px] font-label text-on-surface-variant uppercase tracking-widest opacity-60">Editor</div>
+</div>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant/40 hover:text-on-surface text-sm">more_vert</button>
+</div>
+<!-- Member Item 3 -->
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-3 opacity-60">
+<div class="relative">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">person</span>
+</div>
+<span class="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full bg-outline border-2 border-[#141418]"></span>
+</div>
+<div>
+<div class="text-xs font-bold font-headline tracking-tight text-on-surface">Null_Ptr</div>
+<div class="text-[9px] font-label text-on-surface-variant uppercase tracking-widest">Offline</div>
+</div>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant/40 hover:text-on-surface text-sm">more_vert</button>
+</div>
+<!-- Member Item 4 -->
+<div class="flex items-center justify-between group">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-9 h-9 rounded-lg object-cover grayscale group-hover:grayscale-0 transition-all" data-alt="Portrait of a young man with futuristic streetwear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-qvm-3tOIxpNFCX6I9VnZQ-jGJQHmLPDXIvKJVePVTLz6oNuYJxkqsAXS7q-RsjFRgT_ZK7EKXcjM5iNDIyVoWInOA8NfXESI1O_xWBR4V8OEo5MbZWUoTWpfIFvibwll15w1ItWpO0CGu0PRhvfpZiYtjsKsh5DUPMEvZ0aRmNGdaDmDUdDzncjTmCqgFoeNw0M2YwqRmoztIlj0P6xjST5EL1in0kaiXhkyixkP9mAFlo9YmPZ4zLFHAb1H1iHlBXmE0hJgEno"/>
+<span class="absolute -bottom-0.5 -right-0.5 h-2.5 w-2.5 rounded-full bg-emerald-500 border-2 border-[#141418]"></span>
+</div>
+<div>
+<div class="text-xs font-bold font-headline tracking-tight text-on-surface">Data_Leak</div>
+<div class="text-[9px] font-label text-on-surface-variant uppercase tracking-widest opacity-60">Guest</div>
+</div>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant/40 hover:text-on-surface text-sm">more_vert</button>
+</div>
+</div>
+</div>
+<!-- Encryption Badge (Signature Component) -->
+<div class="px-6 py-4">
+<div class="bg-surface-container-highest/40 backdrop-blur-md rounded-lg p-4 border border-primary-container/10 flex items-center gap-4">
+<div class="p-2 rounded bg-primary-container/20">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+<div>
+<div class="font-headline text-[11px] font-bold text-primary-container uppercase tracking-widest">Quantum Guard v2.4</div>
+<div class="font-label text-[9px] text-on-surface-variant/70 uppercase">Active Encryption Engine</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Danger Zone -->
+<div class="p-6 mt-auto border-t border-error/20 bg-error/5">
+<button class="w-full py-3 border border-error/40 text-error font-headline font-black text-xs uppercase tracking-[0.2em] rounded-sm hover:bg-error hover:text-on-error transition-all active:scale-95 shadow-[0_0_15px_rgba(255,180,171,0.1)]">
+                    Leave Group
+                </button>
+</div>
+</aside>
+</div>
+<!-- UI Atmosphere Detail -->
+<div class="fixed bottom-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary-container/20 to-transparent pointer-events-none"></div>
+<div class="fixed top-0 left-0 w-1 h-full bg-gradient-to-b from-transparent via-primary-container/10 to-transparent pointer-events-none"></div>
+</body></html>

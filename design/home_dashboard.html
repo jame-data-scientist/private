@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CipherChat | Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#2a2a2c",
+                        "on-primary-container": "#006c71",
+                        "outline": "#849495",
+                        "surface-variant": "#353437",
+                        "tertiary-fixed-dim": "#e7c427",
+                        "secondary-fixed-dim": "#dab9ff",
+                        "tertiary-container": "#ffdb3f",
+                        "inverse-on-surface": "#313032",
+                        "on-surface-variant": "#b9caca",
+                        "on-secondary-fixed": "#2a0053",
+                        "on-tertiary": "#3a3000",
+                        "on-primary-fixed-variant": "#004f53",
+                        "inverse-surface": "#e5e1e4",
+                        "secondary-fixed": "#eedbff",
+                        "on-error": "#690005",
+                        "surface-bright": "#39393b",
+                        "surface": "#131315",
+                        "on-primary-fixed": "#002021",
+                        "background": "#131315",
+                        "tertiary": "#fff9f0",
+                        "tertiary-fixed": "#ffe16c",
+                        "outline-variant": "#3a494a",
+                        "surface-dim": "#131315",
+                        "on-tertiary-fixed-variant": "#544600",
+                        "on-surface": "#e5e1e4",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed-variant": "#611baa",
+                        "secondary": "#dab9ff",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed": "#63f7ff",
+                        "on-secondary-container": "#cfa7ff",
+                        "surface-container-highest": "#353437",
+                        "primary-container": "#00f5ff",
+                        "surface-container-lowest": "#0e0e10",
+                        "error-container": "#93000a",
+                        "on-secondary": "#460084",
+                        "on-tertiary-fixed": "#221b00",
+                        "secondary-container": "#641fac",
+                        "on-primary": "#003739",
+                        "surface-container": "#201f21",
+                        "on-background": "#e5e1e4",
+                        "inverse-primary": "#00696e",
+                        "on-tertiary-container": "#736000",
+                        "primary-fixed-dim": "#00dce5",
+                        "primary": "#e9feff",
+                        "surface-container-low": "#1b1b1d",
+                        "surface-tint": "#00dce5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .shimmer-effect-on-hover:hover {
+            background: linear-gradient(90deg, transparent, rgba(0, 245, 255, 0.05), transparent);
+            background-size: 200% 100%;
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest text-on-surface font-body selection:bg-primary-container/30">
+<!-- SideNavBar Anchor -->
+<aside class="fixed left-0 top-0 h-full flex flex-col w-[260px] border-r border-primary-container/20 bg-[#0e0e10] z-50 shadow-[0_0_20px_rgba(99,247,255,0.1)]">
+<!-- Brand Header -->
+<div class="p-6 flex items-center gap-3">
+<div class="w-8 h-8 bg-gradient-to-br from-primary-container to-secondary-container rounded-sm flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-fixed text-lg" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+<span class="text-2xl font-bold tracking-tighter text-[#00f5ff] font-['Space_Grotesk']">CipherChat</span>
+</div>
+<!-- Main Navigation -->
+<nav class="flex-1 px-3 mt-4 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-sm transition-all duration-300 bg-[#641fac]/20 border-l-2 border-[#00f5ff] text-[#00f5ff] font-bold group" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label text-sm tracking-wider">Home</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-sm transition-all duration-300 text-[#b9caca] opacity-70 hover:bg-[#353437] group" href="#">
+<span class="material-symbols-outlined">chat</span>
+<span class="font-label text-sm tracking-wider">Messages</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-sm transition-all duration-300 text-[#b9caca] opacity-70 hover:bg-[#353437] group" href="#">
+<span class="material-symbols-outlined">key</span>
+<span class="font-label text-sm tracking-wider">Encryption</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-sm transition-all duration-300 text-[#b9caca] opacity-70 hover:bg-[#353437] group" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label text-sm tracking-wider">Settings</span>
+</a>
+</nav>
+<!-- Contextual Actions -->
+<div class="px-4 py-6 space-y-2">
+<button class="w-full flex items-center justify-center gap-2 py-3 bg-gradient-to-r from-primary-container to-secondary-container text-on-primary-fixed font-bold rounded-sm scale-98 active:scale-95 duration-200 transition-transform">
+<span class="material-symbols-outlined text-sm">add_circle</span>
+<span class="font-label text-xs uppercase tracking-widest">Create Group</span>
+</button>
+<button class="w-full flex items-center justify-center gap-2 py-3 border border-primary-container/20 text-primary-container font-medium rounded-sm hover:bg-primary-container/5 transition-colors">
+<span class="material-symbols-outlined text-sm">group_add</span>
+<span class="font-label text-xs uppercase tracking-widest">Join Group</span>
+</button>
+</div>
+<!-- Profile / Footer -->
+<div class="mt-auto p-4 border-t border-outline-variant/10">
+<div class="flex items-center gap-3 p-2 mb-4 bg-surface-container-low rounded-lg">
+<div class="relative">
+<img alt="User profile with neon status indicator" class="w-10 h-10 rounded-full bg-surface-variant border border-primary-container/30" data-alt="close-up portrait of a digital avatar with glowing cyan cybernetic accents and dark matte background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdJahlmMiyW0xSkqzUBZtT8jyycJAD0j9__w-Q-Bagfz_6PPApjVQO4-u2Djm9dQEQU2Bk1FBu0s44WtjhzsB16J7hc0JjmJWfxFp5S5t1TYVy1-wOn0Geb8rXBfGm6493JDSpHmKqJqtXiPmC5I3yUK8lIL-_-XMWDsx9T2jXU5C_QmXvihKfbPVVOL-JBTGi1IasOz7WUb73JyzXhCuluuKAeSlyn_Qbam2x5ziZtXv274XFDki8WIkS4rDhmb8DCmOPszVOjpQ"/>
+<div class="absolute bottom-0 right-0 w-3 h-3 bg-primary-container rounded-full border-2 border-[#0e0e10] shadow-[0_0_8px_#00f5ff]"></div>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-on-surface leading-none">Agent_Zero</span>
+<span class="text-[10px] text-primary-container font-label uppercase tracking-widest mt-1">Verified Agent</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<button class="flex items-center gap-3 px-4 py-2 text-[#b9caca] opacity-70 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-sm">sensors</span>
+<span class="font-label text-xs uppercase tracking-[0.05em]">Status</span>
+</button>
+<button class="flex items-center gap-3 px-4 py-2 text-[#b9caca] opacity-70 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-sm">logout</span>
+<span class="font-label text-xs uppercase tracking-[0.05em]">Logout</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-[260px] min-h-screen flex flex-col bg-[#0e0e10]">
+<!-- TopAppBar Anchor -->
+<header class="h-16 flex justify-between items-center w-full px-6 sticky top-0 bg-[#0e0e10]/80 backdrop-blur-xl z-40">
+<div class="flex items-center gap-8">
+<h1 class="text-xl font-black text-[#00f5ff] uppercase tracking-widest font-headline">Dashboard</h1>
+<nav class="hidden md:flex gap-6">
+<a class="text-[#00f5ff] border-b-2 border-[#00f5ff] pb-1 font-label text-xs uppercase tracking-widest" href="#">Direct Messages</a>
+<a class="text-[#b9caca] hover:text-[#00f5ff] transition-all font-label text-xs uppercase tracking-widest" href="#">Encrypted Channels</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative group hidden lg:block">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 material-symbols-outlined text-[#b9caca] text-sm">search</span>
+<input class="bg-surface-container-highest/50 border-none rounded-sm pl-10 pr-4 py-2 text-[10px] tracking-widest font-label focus:ring-1 focus:ring-primary-container/30 w-64 text-on-surface placeholder:text-outline/50 uppercase" placeholder="SEARCH ENCRYPTED ARCHIVE..." type="text"/>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#b9caca] hover:text-[#00f5ff] transition-all relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-1.5 h-1.5 bg-secondary-container rounded-full"></span>
+</button>
+<button class="text-[#b9caca] hover:text-[#00f5ff] transition-all">
+<span class="material-symbols-outlined">security</span>
+</button>
+<button class="bg-primary-container text-on-primary-fixed px-4 py-1.5 rounded-sm font-label text-[10px] font-black uppercase tracking-widest flex items-center gap-2 hover:brightness-110 transition-all">
+                        New Cipher
+                    </button>
+</div>
+</div>
+</header>
+<!-- Canvas Area -->
+<section class="flex-1 flex flex-col items-center justify-center p-8 relative overflow-hidden">
+<!-- Tactical Background Pattern -->
+<div class="absolute inset-0 opacity-[0.02] pointer-events-none" style="background-image: radial-gradient(#00f5ff 1px, transparent 1px); background-size: 32px 32px;"></div>
+<!-- Empty State -->
+<div class="relative z-10 flex flex-col items-center text-center max-w-md">
+<!-- Glowing Icon Unit -->
+<div class="mb-8 relative">
+<div class="absolute inset-0 bg-primary-container/20 blur-3xl rounded-full scale-150"></div>
+<div class="w-24 h-24 rounded-full border border-primary-container/30 flex items-center justify-center relative bg-surface-container-lowest">
+<span class="material-symbols-outlined text-5xl text-primary-container" style="font-variation-settings: 'FILL' 0, 'wght' 200;">grid_view</span>
+<!-- Orbiting Accents -->
+<div class="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2 border-secondary-container"></div>
+<div class="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2 border-primary-container"></div>
+</div>
+</div>
+<h2 class="text-3xl font-bold text-on-surface font-headline tracking-tight mb-4">
+                    Secure Perimeter Established
+                </h2>
+<p class="text-on-surface-variant font-body text-lg leading-relaxed mb-10">
+                    No active groups. Join or Create a group to begin chatting. Your communications are shielded by end-to-end tactical encryption protocols.
+                </p>
+<div class="grid grid-cols-2 gap-4 w-full">
+<button class="flex flex-col items-center gap-3 p-6 rounded-sm bg-surface-container border border-outline-variant/20 hover:border-primary-container/40 hover:bg-surface-container-high transition-all group">
+<span class="material-symbols-outlined text-primary-container group-hover:scale-110 transition-transform">add_box</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Initialize New Group</span>
+</button>
+<button class="flex flex-col items-center gap-3 p-6 rounded-sm bg-surface-container border border-outline-variant/20 hover:border-secondary-container/40 hover:bg-surface-container-high transition-all group">
+<span class="material-symbols-outlined text-secondary-container group-hover:scale-110 transition-transform">key_visualizer</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">Enter Access Key</span>
+</button>
+</div>
+</div>
+<!-- Decorative HUD Elements -->
+<div class="absolute top-12 left-12 opacity-20 hidden xl:block">
+<div class="text-[10px] font-label text-primary-container tracking-[0.2em] uppercase mb-1">Node_Status: Online</div>
+<div class="w-48 h-[1px] bg-gradient-to-r from-primary-container to-transparent"></div>
+</div>
+<div class="absolute bottom-12 right-12 opacity-20 hidden xl:block text-right">
+<div class="text-[10px] font-label text-secondary-container tracking-[0.2em] uppercase mb-1">Protocol: v4.2.0_SECURE</div>
+<div class="w-48 h-[1px] bg-gradient-to-l from-secondary-container to-transparent ml-auto"></div>
+</div>
+</section>
+<!-- Activity Feed (Asymmetric Minimalist) -->
+<aside class="w-full px-8 pb-8 flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<h3 class="font-label text-[10px] uppercase tracking-[0.3em] text-outline">Encryption Log / Recent Events</h3>
+<div class="h-[1px] flex-1 mx-6 bg-outline-variant/20"></div>
+<span class="text-[10px] font-label text-primary-container">LIVE_FEED</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Micro-Card 1 -->
+<div class="p-4 bg-surface-container-low/40 rounded-sm border-l border-primary-container/20 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<span class="text-[9px] font-label text-primary-container tracking-widest">SYSTEM_INFO</span>
+<span class="text-[9px] font-label text-outline">12:04:11</span>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-snug">New encryption keys generated for session #8219. Pulse check: Normal.</p>
+</div>
+<!-- Micro-Card 2 -->
+<div class="p-4 bg-surface-container-low/40 rounded-sm border-l border-secondary-container/20 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<span class="text-[9px] font-label text-secondary-container tracking-widest">SECURITY_ALERT</span>
+<span class="text-[9px] font-label text-outline">11:58:02</span>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-snug">Attempted unauthorized handshake from IP 192.168.1.X blocked. Perimeter secure.</p>
+</div>
+<!-- Micro-Card 3 -->
+<div class="p-4 bg-surface-container-low/40 rounded-sm border-l border-primary-container/20 flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<span class="text-[9px] font-label text-primary-container tracking-widest">USER_ACTION</span>
+<span class="text-[9px] font-label text-outline">09:12:45</span>
+</div>
+<p class="text-[11px] text-on-surface-variant leading-snug">Identity verified via biometric layer 2. Agent_Zero session authorized.</p>
+</div>
+</div>
+</aside>
+</main>
+<!-- Global Encryption Badge -->
+<div class="fixed bottom-6 right-6 z-50">
+<div class="flex items-center gap-3 px-4 py-2 bg-surface-variant/60 backdrop-blur-xl border border-primary-container/20 rounded-full shadow-[0_0_15px_rgba(0,245,255,0.1)]">
+<span class="material-symbols-outlined text-primary-container text-sm" style="font-variation-settings: 'FILL' 1;">lock</span>
+<span class="font-label text-[10px] font-bold text-on-surface tracking-[0.1em] uppercase">Tactical Link Encrypted</span>
+<div class="w-1.5 h-1.5 bg-primary-container rounded-full animate-pulse shadow-[0_0_4px_#00f5ff]"></div>
+</div>
+</div>
+</body></html>
