@@ -115,7 +115,7 @@ io.on('connection', (socket) => {
 });
 
 // Any unmatched route serves the React app
-app.get('*', (req, res) => {
+app.get('(.*)', (req, res) => {
   res.sendFile(path.join(frontendPath, 'index.html'));
 });
 
